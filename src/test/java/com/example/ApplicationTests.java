@@ -28,7 +28,7 @@ class ApplicationTests {
     @Test
     void save() {
         Book book = new Book();
-        book.setType("测试数据123");
+        book.setType("测试数据123   hot-fix");
         book.setName("safsafsd");
         book.setDescription("测试wefrwfrwe数据123");
         bookMapper.insert(book);
