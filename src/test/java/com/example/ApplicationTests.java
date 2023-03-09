@@ -39,8 +39,8 @@ class ApplicationTests {
         Book book = new Book();
         book.setId(26);
         book.setType("测试数据123修改");
-        book.setName("测试数据123");
-        book.setDescription("测试数据123");
+        book.setName("ttewtwerteg");
+        book.setDescription("测试ertyerterrt数据123");
         bookMapper.updateById(book);
 
     }
