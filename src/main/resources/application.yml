@@ -1,0 +1,49 @@
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/day14?&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: mysql
+  devtools:
+    restart:
+      additional-exclude: static/**
+      enabled: false  # 关闭热部署
+  boot:
+    admin:
+      client:
+        url: http://localhost
+
+#  profiles:
+#    active: @profile.active@
+#    group:
+#      "dev": devDB,devMVC
+#      "pro": devDB,proMVC
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto
+
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 8888
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info:
+  appName: @project.artifactId@
+  version: @project.version@
+  company: 传智教育
+  author: heima
