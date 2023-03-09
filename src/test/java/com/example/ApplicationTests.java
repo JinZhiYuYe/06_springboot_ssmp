@@ -30,6 +30,7 @@ class ApplicationTests {
         Book book = new Book();
         book.setType("测试数据123   hot-fix");
         book.setName("safsafsd");
+        System.out.println("master 冲突分析");
         book.setDescription("测试wefrwfrwe数据123");
         bookMapper.insert(book);
 
